@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<HTML lang="en">
+
+<HEAD>
+    <TITLE>Friend Finder</TITLE>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Added a link to Bootstrap and local css file-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+        color: black;
+        margin: 0;
+    }
+    .btn,
+    .btn:active,
+    .btn:active:focus {
+        font-size: 30px;
+        color: #fff;
+        background-color: #340865;
+        border: none;
+    }
+    
+    .btn:hover,
+    .btn:focus {
+        background-color: #220542;
+        border-color: white;
+        color: #A2A7A5;
+    }
+    
+    .btn:focus {
+        color: #fff;
+    }
+    
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus {
+        outline: 0 none;
+    }
+    
+    ::-moz-selection {
+        background: #340865;
+        color: #fff;
+        text-shadow: none;
+    }
+    
+    ::selection {
+        background: #340865;
+        color: #fff;
+        text-shadow: none;
+    }
+    
+    body {
+        font-family: 'Titillium Web', sans-serif;
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        background-color: #fde192;
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 90px;
+    }
+    
+    h1 {
+        margin-top: 0px;
+    }
+    
+    .jumbotron {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #58348c;
+        padding: 20px 30px 20px 30px;
+        border-bottom: 15px solid #635380;
+        margin: 0;
+    }
+    /*sticky footer code*/
+    
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+    
+    .footer {
+        position: absolute;
+        bottom: 0;
+        font-size: 1.1em;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 90px;
+        color: #A2A7A5;
+        background-color: #340865;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 15px solid #635380;
+    }
+    #text{
+        width:70%;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+
+<BODY>
+    <div class="jumbotron">
+        <img src="/orlando.png" width=15%>
+        <img src="/lionsonly.jpg" width=45%>
+         <img src="/pride.png" width=18%>
+    </div>
+    <div class="container">
+        <div id="text"> 
+        <br>
+        <p>Orlando City SC is proud to announce the launch of Lions Only, a dating website built exclusively for City fans. The state-of-the-art matchmaking system uses a bank of 3.5 billion algorithms to determine your perfect match. The technology, designed by industry visionary Lorenzo von Matterhorn, is used to power similar websites around the world.</p><p>“We want our fan base to span generations,” said Orlando City Founder and President Phil Rawlins. “Lions Only is an obvious step in that direction and will stand to unite our fans in a way no other club has done before.”</p></div>
+        <a href="/survey" class="btn btn-success">Start Matching!</a>
+    </div>
+    <footer class="footer text-center">
+        <p>Copyright © 2017 - Sean Bevard - All Rights Reserved</p>
+    </footer>
+</BODY>
+
+</HTML>
