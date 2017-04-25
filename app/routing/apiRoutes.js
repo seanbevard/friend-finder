@@ -11,6 +11,10 @@ module.exports = function(app) {
         res.json(friendsData);
     });
 
-
-    //POST to friend data
+ 
+  app.post("/api/friends", function(req, res) {
+   //todo: if male/female post to the right array
+      friendsData.push(req.body);
+      res.json(true);
+    });
 }
