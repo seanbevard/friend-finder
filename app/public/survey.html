@@ -2,12 +2,13 @@
 <HTML lang="en">
 
 <HEAD>
-    <TITLE>Friend Finder</TITLE>
+    <TITLE>Lions Only!</TITLE>
     <!-- Added link to the jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
     <!-- Added a link to Bootstrap and local css file-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- CSS Styling: -->
     <style>
     .container {
         width: 100%;
@@ -105,19 +106,34 @@
     #text {
         width: 70%;
     }
+    
+    #resultsModal {
+        color: black;
+    }
     </style>
+    <!-- Google fonts and viewport: -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </HEAD>
 
 <BODY>
+    <!-- Heading: -->
     <div class="jumbotron">
         <img src="/orlando.png" width=15%>
         <img src="/lionsonly.jpg" width=45%>
         <img src="/pride.png" width=18%>
     </div>
     <div class="container">
+        <br>
+        <!-- Survey starts here: -->
         <form id="form">
+            <div class="form-group">
+                <p><b>Please select your gender:</b></p>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="Male">Male</label>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="Female">Female</label>
+            </div>
             <div class="form-group">
                 <label for="friend-name">Please enter your first and last name:</label>
                 <input type="text" class="form-control" id="friend-name">
@@ -127,181 +143,211 @@
                 <input type="text" class="form-control" id="friend-image">
             </div>
             <div class="form-group">
-                <label class="radio-inline">
-                    <input type="radio" name="gender" value="Male">Male</label>
-                <label class="radio-inline">
-                    <input type="radio" name="gender" value="Female">Female</label>
-            </div>
-            <div class="form-group">
-                <label for="question1">Select list:</label>
-                <select class="form-control" id="question1">
+                <label for="question1">You live by the phrase 'Defense Wins Championships'.</label>
+                <select class="form-control question" id="question1">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question2">Select list:</label>
-                <select class="form-control" id="question2">
+                <label for="question2">Canada seems like a nice place, eh?!</label>
+                <select class="form-control question" id="question2">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question3">Select list:</label>
-                <select class="form-control" id="question3">
+                <label for="question3">Blonde > Brunette</label>
+                <select class="form-control question" id="question3">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question4">Select list:</label>
-                <select class="form-control" id="question4">
+                <label for="question4">The Over 30 league is not so bad.</label>
+                <select class="form-control question" id="question4">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question5">Select list:</label>
-                <select class="form-control" id="question5">
+                <label for="question5">Eu falo Portugues muito bem!</label>
+                <select class="form-control question" id="question5">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question6">Select list:</label>
-                <select class="form-control" id="question6">
+                <label for="question6">¡Qué viva Colombia, carajo!</label>
+                <select class="form-control question" id="question6">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question7">Select list:</label>
-                <select class="form-control" id="question7">
+                <label for="question7">I prefer taller men/women.</label>
+                <select class="form-control question" id="question7">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question8">Select list:</label>
-                <select class="form-control" id="question8">
+                <label for="question8">If I score a goal, it probably wasn't with my feet.</label>
+                <select class="form-control question" id="question8">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question9">Select list:</label>
-                <select class="form-control" id="question9">
+                <label for="question9">Playing for my National Team is important!</label>
+                <select class="form-control question" id="question9">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="question10">Select list:</label>
-                <select class="form-control" id="question10">
+                <label for="question10">Oi, R U 'avin a giggle mate?!</label>
+                <select class="form-control question" id="question10">
                     <option value="">Please select 1 through 5</option>
-                    <option value="1">1</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-success submit">Submit</button>
         </form>
         <br>
     </div>
+    <!-- Modal starts here: -->
+    <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Your Match!</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sticky footer stars here: -->
     <footer class="footer text-center">
         <p>Copyright © 2017 - Sean Bevard - All Rights Reserved</p>
     </footer>
 </BODY>
 
 </HTML>
-//Javascript to POST to server and write to correct file
 <script type="text/javascript">
+/*Basically everything on this page is 
+done on the Submit click event*/
 $(".submit").on("click", function(event) {
+
+    //prevent default
     event.preventDefault();
 
-    //validation
+    /*loop through answers and push to answerArray
+    for some reason parseInt here didn't work because
+    once it went to the server the values were a string again*/
+    var answerArray = [];
+    $('.question').each(function() {
+        answerArray.push(parseInt($(this).val()));
+    });
+
+    /*If everything has been entered, continue
+    otherwise alert the user to complete form*/
+    if (validateForm()) {
+
+        /*newFriend object is storing the user inputs
+        including the answer array we created*/
+        var newFriend = {
+            friendName: $("#friend-name").val().trim(),
+            friendPhoto: $("#friend-image").val().trim(),
+            scores: answerArray,
+            gender: $("input[name='gender']:checked").val()
+        };
+
+        /*POST the data to the API and reset everything once we get the response
+          the response being the object of the users closest match*/
+        $.post("/api/friends", newFriend,
+            function(data) {
+
+                /* Clear radio buttons and text fields now that we are done*/
+                $('input[name="gender"]').prop('checked', false);
+
+                // Reset text fields and dropdowns
+                $(".form-control").val("");
+
+                //toggle modal containing response name and image
+                $('.modal-body').html("Your Match is: " + data.friendName);
+                $('.modal-body').append("<center><img style='max-width:500px' src='" + data.friendPhoto + "'></center>");
+                $('#resultsModal').modal('toggle');
+            });
+    } else {
+        //Input is missing!
+        alert("All Survey Fields Are Required!");
+    }
+
+    /*Validate the form fields, return false and
+    alert the user if anything is missing*/
+    //does this have to be in the onclick?
     function validateForm() {
         var isValid = true;
+
+        //validate dropdowns and text fields
         $('.form-control').each(function() {
             if ($(this).val() === '')
                 isValid = false;
         });
+
         //validate radio button
         if (!$("input[name='gender']:checked").val()) {
             isValid = false;
         }
-
         return isValid;
     }
-    console.log(validateForm());
-    if (validateForm()) {
-        //need to loop through form elements and push them to an array
-        var scoreArray = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
-
-        // Here we grab the form elements
-        var newFriend = {
-            friendName: $("#friend-name").val().trim(),
-            friendPhoto: $("#friend-image").val().trim(),
-            scores: scoreArray,
-            gender: $("input[name='gender']:checked").val()
-        };
-
-        //POST the data to the api and reset everything once we get the response
-        $.post("/api/friends", newFriend,
-            function(data) {
-                if (data) {
-                    alert("Survey Submitted!");
-                    // Cear radio buttons
-                    $('input[name="gender"]').prop('checked', false);
-                    // Reset text fields and dropdowns
-                    $(".form-control").val("");
-
-                    //do the matching logic
-                }
-            });
-    } else {
-        alert("All Survey Fields Are Required!");
-    }
 });
-
-
-//Need a function for matching
 </script>
