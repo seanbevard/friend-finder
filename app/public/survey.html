@@ -12,11 +12,7 @@
     <style>
     .container {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
         color: black;
-        margin: 0;
     }
     
     .btn,
@@ -70,16 +66,23 @@
     
     h1 {
         margin-top: 0px;
+        color:#58348c;
+        text-decoration: underline;
     }
     
     .jumbotron {
+        text-align: center;
+        font-size: 20px;
+        background-color: #58348c;
+        padding: 20px 30px 10px 30px;
+        border-bottom: 15px solid #635380;
+        margin: 0;
+    }
+    
+    .heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #58348c;
-        padding: 20px 30px 20px 30px;
-        border-bottom: 15px solid #635380;
-        margin: 0;
     }
     /*sticky footer code*/
     
@@ -110,6 +113,9 @@
     #resultsModal {
         color: black;
     }
+    .form-control{
+        width:200px;
+    }
     </style>
     <!-- Google fonts and viewport: -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
@@ -119,9 +125,10 @@
 <BODY>
     <!-- Heading: -->
     <div class="jumbotron">
-        <img src="/orlando.png" width=15%>
+       <div class="heading"> <img src="/orlando.png" width=18%>
         <img src="/lionsonly.jpg" width=45%>
-        <img src="/pride.png" width=18%>
+        <img src="/pride.png" width=18%></div>
+        <span class='tag-line'>"You don't have to be lonely, with LionsOnly."</span>
     </div>
     <div class="container">
         <br>
@@ -140,9 +147,10 @@
             </div>
             <div class="form-group">
                 <label for="friend-image">Please enter the URL for your image:</label>
-                <input type="text" class="form-control" id="friend-image">
-            </div>
+                <input type="text" class="form-control" style="width:400px" id="friend-image">
+            </div><br>
             <div class="form-group">
+                <h1>Question 1</h1>
                 <label for="question1">You live by the phrase 'Defense Wins Championships'.</label>
                 <select class="form-control question" id="question1">
                     <option value="">Please select 1 through 5</option>
@@ -152,8 +160,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 2</h1>
                 <label for="question2">Canada seems like a nice place, eh?!</label>
                 <select class="form-control question" id="question2">
                     <option value="">Please select 1 through 5</option>
@@ -163,8 +172,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 3</h1>
                 <label for="question3">Blonde > Brunette</label>
                 <select class="form-control question" id="question3">
                     <option value="">Please select 1 through 5</option>
@@ -174,8 +184,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 4</h1>
                 <label for="question4">The Over 30 league is not so bad.</label>
                 <select class="form-control question" id="question4">
                     <option value="">Please select 1 through 5</option>
@@ -185,8 +196,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 5</h1>
                 <label for="question5">Eu falo Portugues muito bem!</label>
                 <select class="form-control question" id="question5">
                     <option value="">Please select 1 through 5</option>
@@ -196,8 +208,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 6</h1>
                 <label for="question6">¡Qué viva Colombia, carajo!</label>
                 <select class="form-control question" id="question6">
                     <option value="">Please select 1 through 5</option>
@@ -207,8 +220,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 7</h1>
                 <label for="question7">I prefer taller men/women.</label>
                 <select class="form-control question" id="question7">
                     <option value="">Please select 1 through 5</option>
@@ -218,8 +232,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 8</h1>
                 <label for="question8">If I score a goal, it probably wasn't with my feet.</label>
                 <select class="form-control question" id="question8">
                     <option value="">Please select 1 through 5</option>
@@ -229,8 +244,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 9</h1>
                 <label for="question9">Playing for my National Team is important!</label>
                 <select class="form-control question" id="question9">
                     <option value="">Please select 1 through 5</option>
@@ -240,8 +256,9 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <div class="form-group">
+                <h1>Question 10</h1>
                 <label for="question10">Oi, R U 'avin a giggle mate?!</label>
                 <select class="form-control question" id="question10">
                     <option value="">Please select 1 through 5</option>
@@ -251,7 +268,7 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
-            </div>
+            </div><br>
             <button type="submit" class="btn btn-success submit">Submit</button>
         </form>
         <br>
