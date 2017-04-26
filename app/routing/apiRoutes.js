@@ -45,6 +45,8 @@ module.exports = function(app) {
                 if (totalDifference < leastDifference) {
                     leastDifference = totalDifference;
                     closestMatch = menData[i];
+                    //for testing, verifying each new closest match is overwritten
+                    console.log("New closest match is: " + closestMatch.friendName);
                 }
             }
 
